@@ -81,6 +81,9 @@ void ResGUISys::LoadCSS(const QString& sheetName)
 void ResGUISys::TimeoutHandler() 
 {
     //qDebug() << "TimeoutHandler Called!" << endl;
+    QPen pen;
+    pen.setWidth(5);
+	ui.resWaveGraph->graph(0)->setPen(pen);
 	timerPlot->m_cnt++;
 	ui.resWaveGraph->graph(0)->addData(resWave->tSeq[timerPlot->m_cnt - 1], resWave->resSeq[timerPlot->m_cnt - 1]);
     if (timerPlot->m_cnt >= resWave->nSamples) {
@@ -174,7 +177,7 @@ void ResGUISys::GraphSetup()
 	ui.resWaveGraph->xAxis->setTickLabelFont(QFont("Microsoft Yahei", 12, QFont::Bold));
 	ui.resWaveGraph->yAxis->setTickLabelFont(QFont("Microsoft Yahei", 12, QFont::Bold));
     QPen pen;
-    pen.setWidth(2);
+    pen.setWidth(5);
     ui.resWaveGraph->xAxis->setBasePen(pen);
     ui.resWaveGraph->yAxis->setBasePen(pen);
 	ui.resWaveGraph->xAxis->setTickPen(pen);
@@ -185,7 +188,6 @@ void ResGUISys::GraphSetup()
 	ui.resWaveGraph->yAxis->setTickLengthIn(10);
 	ui.resWaveGraph->xAxis->setSubTickLengthIn(5);
 	ui.resWaveGraph->yAxis->setSubTickLengthIn(5);
-    //ui.resGuide_TBrowser->append(QStringLiteral("训练开始!"));
 }
 /**
 * @func          ResParamsInit
@@ -283,6 +285,8 @@ void ResGUISys::ResWaveGenHandler()
 	case ResWave::Abdominal: {
 		AbdominalRespiration* resObj = new AbdominalRespiration(); // 指向具体的子对象
 		resWave = &(*resObj);
+		ui.resGuide_TBrowser->clear();
+		ui.resGuide_TBrowser->append(QStringLiteral("\n 腹式呼吸训练开始!\n 1. 请模拟屏幕上的曲线变化进行呼吸.\n 2. 当曲线上升时，您需要吸气; 当曲线下降时，您需要呼气\n")); // 文字提示
 		break;
 	}
 	case ResWave::PursedLip: {
@@ -293,16 +297,22 @@ void ResGUISys::ResWaveGenHandler()
 	case ResWave::Box: {
 		BoxBreathing* resObj = new BoxBreathing(); // 指向具体的子对象
 		resWave = &(*resObj);
+		ui.resGuide_TBrowser->clear();
+		ui.resGuide_TBrowser->append(QStringLiteral("\n 箱式呼吸训练开始!\n 1. 请模拟屏幕上的曲线变化进行呼吸.\n 2. 当曲线上升时，您需要吸气; 当曲线下降时，您需要呼气; 当曲线水平时，您需要屏气.\n")); // 文字提示
 		break;
 	}
 	case ResWave::Buteyko: {
 		ButeykoBreathing* resObj = new ButeykoBreathing(); // 指向具体的子对象
 		resWave = &(*resObj);
+		ui.resGuide_TBrowser->clear();
+		ui.resGuide_TBrowser->append(QStringLiteral("\n 布泰科呼吸训练开始!\n 1. 请模拟屏幕上的曲线变化进行呼吸.\n 2. 当曲线上升时，您需要吸气; 当曲线下降时，您需要呼气; 当曲线水平时，您需要屏气.\n")); // 文字提示
 		break;
 	}
 	case ResWave::Paradoxical: {
 		AbdominalRespiration* resObj = new AbdominalRespiration(); // 指向具体的子对象
 		resWave = &(*resObj);
+		ui.resGuide_TBrowser->clear();
+		ui.resGuide_TBrowser->append(QStringLiteral("\n 逆腹式呼吸训练开始!\n 1. 请模拟屏幕上的曲线变化进行呼吸.\n 2. 当曲线上升时，您需要呼气; 当曲线下降时，您需要吸气.\n")); // 文字提示
 		break;
 	}
 	case ResWave::ACBT: {

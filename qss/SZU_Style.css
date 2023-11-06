@@ -6,30 +6,30 @@
     min-width: 400px;
     min-height: 200px;
 }
-#subVBoxLayout { /* ÒªÏÈÉùÃ÷¿Ø¼ş±äÁ¿ */
+#subVBoxLayout { /* ?????????????? */
     min-width: 100px;
     min-height: 300px;
 }
-/********************QPushButtonÑùÊ½**********************/
+/********************QPushButton???**********************/
 QPushButton {
     background-color: whitesmoke;
     background-color:azure;
-    border-radius: 7px;                /* ÉèÖÃ±ß¿òÔ²½Ç */
+    border-radius: 7px;                /* ????????? */
     border-top: 1px solid qlineargradient(y0:0, y1:1, stop: 0 #ececef, stop: 1 white);
     border-left: 1px solid qlineargradient(x0:0, x1:1, stop: 0 #ececef, stop: 1 white);
     border-bottom: 1px solid qlineargradient(y0:0, y1:1, stop: 0 white, stop: 1 #ececef);
     border-right: 1px solid qlineargradient(x0:0, x1:1, stop: 0 white, stop: 1 #ececef);
-    font: 20px "Microsoft YaHei";	        /* ÉèÖÃ×ÖÌå */
+    font: 20px "Microsoft YaHei";	        /* ???????? */
     font-weight: bold;
-    min-width: 80px;                   /* ÉèÖÃ°´¼üµÄ×îĞ¡¿í¶È */
+    min-width: 80px;                   /* ???????????æ½©???? */
     min-height: 25px;
 }
 
-QPushButton:hover{                     /* ÉèÖÃÊó±êÍ£ÁôÑùÊ½ */
+QPushButton:hover{                     /* ????????????? */
     background-color:powderblue;
 }
 
-QPushButton:pressed{                   /* ÉèÖÃ°´¼ü°´ÏÂÑùÊ½ */
+QPushButton:pressed{                   /* ?????????????? */
     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
 }
@@ -38,29 +38,29 @@ QPushButton:flat {
     border: none; /* no border for a flat push button */
 }
 
-QPushButton:default {                 /* ÉèÖÃÄ¬ÈÏ°´¼üÑùÊ½ */
+QPushButton:default {                 /* ????????????? */
     border-color: rgb(249, 251, 253);
 }
 
-QPushButton:open {                    /* ÉèÖÃ²Ëµ¥´ò¿ªÊ±buttonÑùÊ½*/
+QPushButton:open {                    /* ???æ½©?????button???*/
     background-color:qlineargradient(x1: 0 , y1: 0 , x2: 0 , y2: 1 ,
                                   stop: 0 #dadbde, stop: 1 #f6f7fa);
 }
 
-QPushButton::menu-indicator {          /* ÉèÖÃÏÂÀ­¼ıÍ· */
-    subcontrol-origin: content;        /* ¸¸¿Ø¼şÄÚ×Ó¿Ø¼şµÄÔ­µã¾ØĞÎ¡£ÊÇQSS¶ÀÓĞµÄÊôĞÔ¡£ÖµÎª¸¸¿Ø¼şµÄºĞ×ÓÄ£Ê½µÄÇøÓò */
-    subcontrol-position: center right; /* ÉèÖÃÏÂÀ­¼ıÍ·ÏÔÊ¾Î»ÖÃÎªË®Æ½·½ÏòÉÏ¿¿ÓÒ£¬´¹Ö±·½Ïò¾ÓÖĞ*/
+QPushButton::menu-indicator {          /* ??????????? */
+    subcontrol-origin: content;        /* ??????????????????æ½©???QSS???æ½©?????????????????????????? */
+    subcontrol-position: center right; /* ??????????????æ½©?????????????????????????*/
 }
 
 QPushButton::menu-indicator:pressed,
 QPushButton::menu-indicator:open {
-    position: relative;                /* Ö¸¶¨ÁËÔªËØµÄ¶¨Î»ÀàĞÍ*/
-    top: 1px; left: 2px;               /* ÉèÖÃÔÚµã»÷°´¼ü¡¢´ò¿ª²Ëµ¥Ê±Æ«ÒÆÏÂÀ­¼ıÍ·*/
+    position: relative;                /* ??????????æ½©????*/
+    top: 1px; left: 2px;               /* ?????????????????????????????*/
 }
 
-/********************QSliderºáÏò»¬¶¯ÌõÑùÊ½**********************/
+/********************QSlider??????????**********************/
 QSlider {
-    background-color: rgba(170, 255, 255, 0);  /* ÉèÖÃ»¬¶¯ÌõÖ÷Ìå */
+    background-color: rgba(170, 255, 255, 0);  /* ????????????? */
 }
 
 QSlider::groove:horizontal {
@@ -68,10 +68,10 @@ QSlider::groove:horizontal {
     border-left: 1px solid qlineargradient(x0:0, x1:1, stop: 0 #ececef, stop: 1 white);
     border-bottom: 1px solid qlineargradient(y0:0, y1:1, stop: 0 white, stop: 1 #ececef);
     border-right: 1px solid qlineargradient(x0:0, x1:1, stop: 0 white, stop: 1 #ececef);
-    height: 8px;                     /* Ä¬ÈÏÇé¿öÏÂ£¬°¼²Û»áÀ©Õ¹µ½»¬¿éµÄ´óĞ¡¡£Í¨¹ı¸øËüÒ»¸ö¸ß¶È£¬ËüÓĞÒ»¸ö¹Ì¶¨µÄ´óĞ¡*/
+    height: 8px;                     /* ?????????????????????????æ½©?????????????????????????????æ½©*/
     background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0,
     stop:0 rgba(169, 233, 245, 1), stop:0.58 rgba(240, 103, 82, 1), stop:1 rgba(147, 2, 61, 1));
-    border-radius: 4px;             /* ÉèÖÃ»¬¶¯²ÛÔ²½Ç*/
+    border-radius: 4px;             /* ????????????*/
 }
 
 QSlider::handle:horizontal {
@@ -80,74 +80,74 @@ QSlider::handle:horizontal {
     stop:0 rgba(0, 0, 0, 255), stop:0.361582 rgba(0, 146, 146, 255),
     stop:0.649718 rgba(255, 255, 255, 255), stop:1 rgba(0, 177, 181, 255));
     width: 14px;
-    margin: -4px 0px;         /* Ê¹ÓÃ¸ºµÄ±ß¾à¿ÉÒÔÈÃ»¬¿é¸ß¶È³¬¹ı»¬¶¯²Û¸ß¶È*/
-    border-radius: 8px;       /* Í¨¹ıÉèÖÃÔ²½Ç±ß¿òµÃµ½Ô²ĞÎµÄ»¬¿é */
+    margin: -4px 0px;         /* ?????????????????????????????*/
+    border-radius: 8px;       /* ????????????????æ½©???? */
 }
-/********************QComboBoxÑùÊ½**********************/
+/********************QComboBox???**********************/
 QComboBox {
     border: 1px solid gray;
     border-radius: 3px;
-    padding: 1px 3px 1px 3px;         /* ÉèÖÃÔªËØ±ß¿òÓëÔªËØÄÚÈİÖ®¼äµÄÉÏÓÒÏÂ×óµÄÄÚ±ß¾à */
+    padding: 1px 3px 1px 3px;         /* ??????????????????????????????????? */
     font: bold 16px "Microsoft Yahei";
     text-align: center;
     min-width: 150px;
     min-height: 30px; 
 }
 
-QComboBox:editable {                   /* ÉèÖÃ¿É±à¼­µÄÑùÊ½*/
+QComboBox:editable {                   /* ???????????*/
     background-color: white;
 }
 
-QComboBox:!editable,                   /* QComboBox²»¿É±à¼­×´Ì¬*/
-QComboBox::drop-down:editable {        /* ÏÂÀ­¼ıÍ·°´¼üÇøÓò¿É±à¼­×´Ì¬*/
+QComboBox:!editable,                   /* QComboBox???????*/
+QComboBox::drop-down:editable {        /* ???????????????????*/
 }
 
-QComboBox:!editable:on, QComboBox::drop-down:editable:on {      /* µ±µ¯³ö´°¿Ú´ò¿ªÊ±£¬QComboBox»ñÈ¡¡°´ò¿ª¡±×´Ì¬(´ò¿ªÏÂÀ­¿ò×´Ì¬)*/
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {      /* ??????????????QComboBox??????????(??????????)*/
     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
                                 stop: 0 #D3D3D3, stop: 0.4 #D8D8D8,
                                 stop: 0.5 #DDDDDD, stop: 1.0 #E1E1E1);
 }
 
-QComboBox:on {       /* µ¯³öÏÂÀ­¿ò´°¿ÚÊ±ÒÆ¶¯ÎÄ±¾*/
+QComboBox:on {       /* ??????????????????*/
     padding-top: 3px;
     padding-left: 6px;
 }
 
-QComboBox::drop-down {                   /* ÉèÖÃÏÂÀ­°´¼ü*/
-    subcontrol-origin: padding;          /* ÉèÖÃ°´¼üÔÚQComboBoxºĞ×ÓÄ£ĞÍÖĞµÄ²Î¿¼Î»ÖÃmargin border padding content*/
-    subcontrol-position: top right;      /* ÉèÖÃ°´¼üÎ»ÖÃ¿¿ÉÏ¿¿ÓÒ*/
+QComboBox::drop-down {                   /* ????????????*/
+    subcontrol-origin: padding;          /* ?????????QComboBox????????æ½©?æ½©?æ½©??margin border padding content*/
+    subcontrol-position: top right;      /* ???????æ½©????????*/
     width: 20px;
-    border-left-width: 2px;              /* ÉèÖÃÏÂÀ­°´¼ü×ó±ß¿ò¿í¶È*/
-    border-left-color: rgba(0, 255, 0, 0);   /* ×ó±ß¿òÑÕÉ«*/
+    border-left-width: 2px;              /* ???????????????????*/
+    border-left-color: rgba(0, 255, 0, 0);   /* ???????*/
     border-left-style: solid;
-    border-top-right-radius: 3px;        /* ÉèÖÃ±ß¿òÔ²½Ç*/
+    border-top-right-radius: 3px;        /* ?????????*/
     border-bottom-right-radius: 3px;
 }
 
-QComboBox::down-arrow {                  /* ÉèÖÃÏÂÀ­¼ıÍ·*/
+QComboBox::down-arrow {                  /* ???????????*/
     image: url(:/qss/combo_box/darkblue/add_bottom.png);
 }
 
-QComboBox::down-arrow:on {               /* ´ò¿ªÏÂÀ­¿òÊ±ÒÆ¶¯ÏÂÀ­¼ıÍ·*/
+QComboBox::down-arrow:on {               /* ???????????????????*/
     top: 1px;
     left: 1px;
 }
-/********************QTextBrowserÑùÊ½**********************/
+/********************QTextBrowser???**********************/
 QTextBrowser{
     background-color: whitesmoke;
     /* background: transparent; */
     border: 0px;
     border-radius: 2px;
-    font: 20px "Microsoft YaHei";	        /* ÉèÖÃ×ÖÌå */
+    font: 20px "Microsoft YaHei";	        /* ???????? */
     font-weight: bold;   
     min-width: 200px;
     min-height: 100px;
     text-align: center;
     vertical-align: middle;
 }
-/********************QLabelÑùÊ½**********************/
+/********************QLabel???**********************/
 QLabel{
-    background-color:rgba(0, 0, 0, 0); /* Í¸Ã÷±³¾° */
+    background-color:rgba(0, 0, 0, 0); /* ??????? */
     font: 14px "Microsoft YaHei";
     /* font-weight: bold;    */
     border: 0px;
@@ -158,9 +158,9 @@ QLabel{
     text-align: center;
     vertical-align: middle;
 }
-/********************QLineEditÑùÊ½**********************/
+/********************QLineEdit???**********************/
 QLineEdit{
-    background-color: rgba(170, 255, 255, 0); /* Í¸Ã÷±³¾° */
+    background-color: rgba(170, 255, 255, 0); /* ??????? */
     font: 14px "Microsoft YaHei";
     border-top: 1px solid qlineargradient(y0:0, y1:1, stop: 0 #ececef, stop: 1 white);
     border-left: 1px solid qlineargradient(x0:0, x1:1, stop: 0 #ececef, stop: 1 white);
